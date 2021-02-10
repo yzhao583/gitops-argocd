@@ -1,3 +1,14 @@
 apiVersion: v1
-entries: {}
-generated: "2021-02-10T09:06:23.05323+01:00"
+entries:
+  go-hello-http:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2021-02-10T09:07:51.477488+01:00"
+    description: A Helm chart for Kubernetes
+    digest: 4046e027c0534994f3de3f71213cb4e79c706c9e2ae5b49bebb08fa73cd235fd
+    name: go-hello-http
+    type: application
+    urls:
+    - go-hello-http-1.0.0.tgz
+    version: 1.0.0
+generated: "2021-02-10T09:07:51.476992+01:00"
