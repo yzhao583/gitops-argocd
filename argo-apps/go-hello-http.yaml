@@ -14,7 +14,7 @@ spec:
       - values.yaml
       - values.dev.yaml
     path: go-hello-http
-    repoURL: https://github.com/ironcore864/charts
+    repoURL: https://github.com/ironcore864/gitops-argocd
     targetRevision: HEAD
   syncPolicy:
     automated:
