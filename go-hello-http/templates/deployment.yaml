@@ -1,18 +1,49 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: helloworld
+  name: helloworld-v1
   labels:
     app: helloworld
+    version: v1
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
       app: helloworld
+      version: v1
   template:
     metadata:
       labels:
         app: helloworld
+        version: v1
+      annotations:
+        linkerd.io/inject: enabled
+    spec:
+      containers:
+      - name: helloworld
+        image: "ironcore864/go-hello-http:1.0.0"
+        ports:
+        - containerPort: 8080
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: helloworld-v2
+  labels:
+    app: helloworld
+    version: v2
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: helloworld
+      version: v2
+  template:
+    metadata:
+      labels:
+        app: helloworld
+        version: v2
       annotations:
         linkerd.io/inject: enabled
     spec:
