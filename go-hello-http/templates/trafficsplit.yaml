@@ -1,4 +1,4 @@
----
+{{- if .Values.trafficSplit -}}
 apiVersion: split.smi-spec.io/v1alpha1
 kind: TrafficSplit
 metadata:
@@ -10,3 +10,4 @@ spec:
       weight: 50
     - service: helloworld-tiexin2
       weight: 50
+{{- end -}}

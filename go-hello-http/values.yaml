@@ -7,3 +7,4 @@ service:
   exported: false
 
 load: true
+trafficSplit: true
