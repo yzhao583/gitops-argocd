@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: helloworld
-        {{- if .Values.image.tag -}}
+        {{- if .Values.image -}}
         image: "ironcore864/go-hello-http:{{ .Values.image.tag }}"
         {{- else -}}
         image: "ironcore864/go-hello-http:{{ .Chart.AppVersion }}"
