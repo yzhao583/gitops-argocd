@@ -3,3 +3,5 @@ image:
 
 service:
   exported: true
+
+load: false

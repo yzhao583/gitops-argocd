@@ -1,4 +1,4 @@
----
+{{- if .Values.load -}}
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -28,4 +28,4 @@ spec:
         args:
           - |-
             slow_cooker -qps ${QPS} -concurrency ${CONCURRENCY} http://helloworld
-
+{{- end -}}
