@@ -1,0 +1,24 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: helloworld-tiexin2
+  namespace: argocd
+spec:
+  destination:
+    namespace: default
+    server: https://2500717D64A27C5EB9581EF16F66853B.gr7.eu-central-1.eks.amazonaws.com
+  project: default
+  source:
+    helm:
+      valueFiles:
+      - values.yaml
+      - values.tiexin2.yaml
+    path: go-hello-http
+    repoURL: https://github.com/ironcore864/gitops-argocd
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+
