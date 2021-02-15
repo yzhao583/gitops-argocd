@@ -2,3 +2,6 @@ replicaCount: 1
 
 ingress:
   enabled: false
+
+service:
+  exported: false

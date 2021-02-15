@@ -6,7 +6,7 @@ metadata:
 spec:
   service: helloworld
   backends:
-    - service: helloworld-v1
-      weight: 90
-    - service: helloworld-v2
-      weight: 10
+    - service: helloworld
+      weight: 50
+    - service: helloworld-tiexin2
+      weight: 50

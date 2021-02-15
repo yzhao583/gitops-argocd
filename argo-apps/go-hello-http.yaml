@@ -1,3 +1,4 @@
+---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
@@ -12,7 +13,6 @@ spec:
     helm:
       valueFiles:
       - values.yaml
-      - values.dev.yaml
     path: go-hello-http
     repoURL: https://github.com/ironcore864/gitops-argocd
     targetRevision: HEAD
