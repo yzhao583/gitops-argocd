@@ -19,6 +19,6 @@ spec:
     spec:
       containers:
       - name: helloworld
-        image: "ironcore864/go-hello-http:{{ default .Chart.AppVersion Values.image.tag }}"
+        image: "ironcore864/go-hello-http:{{ default .Chart.AppVersion .Values.image.tag }}"
         ports:
         - containerPort: 8080
