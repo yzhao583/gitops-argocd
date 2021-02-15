@@ -5,3 +5,7 @@ ingress:
 
 service:
   exported: false
+
+# defaults to .Chart.AppVersion
+image:
+  tag: 
