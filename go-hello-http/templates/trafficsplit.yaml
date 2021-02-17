@@ -7,9 +7,7 @@ spec:
   service: helloworld
   backends:
     - service: helloworld
-      weight: 20
+      weight: 50
     - service: helloworld-tiexin2
-      weight: 40
-    - service: helloworld-use1
-      weight: 40
+      weight: 50
 {{- end -}}
