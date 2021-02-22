@@ -24,5 +24,8 @@ spec:
         {{ else }}
         image: "ironcore864/go-hello-http:{{ .Chart.AppVersion }}"
         {{ end }}
+        envFrom:
+        - secretRef:
+            name: mysecret
         ports:
         - containerPort: 8080
