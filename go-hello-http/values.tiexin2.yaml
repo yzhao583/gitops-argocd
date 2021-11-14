@@ -1,8 +1,0 @@
-image:
-  tag: 1.0.0
-
-service:
-  exported: true
-
-load: false
-trafficSplit: false
