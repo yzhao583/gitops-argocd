@@ -5,6 +5,7 @@ metadata:
   name: helloworld
   labels:
     app: helloworld
+    backstage.io/kubernetes-id: my-kubernetes-componen
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
@@ -24,6 +25,13 @@ spec:
         {{ else }}
         image: "ironcore864/go-hello-http:{{ .Chart.AppVersion }}"
         {{ end }}
+        resources:
+          limits:
+            cpu: 250m
+            memory: 128Mi
+          requests:
+            cpu: 250m
+            memory: 128Mi
         envFrom:
         - secretRef:
             name: mysecret
