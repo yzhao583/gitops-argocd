@@ -3,10 +3,6 @@ kind: Service
 apiVersion: v1
 metadata:
   name: helloworld
-  {{ if .Values.service.exported }}
-  labels:
-    mirror.linkerd.io/exported: "true"
-  {{ end }}
 spec:
   selector:
     app: helloworld
