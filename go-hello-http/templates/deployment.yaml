@@ -2,24 +2,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: helloworld
+  name: my-kubernetes-component
   labels:
-    app: helloworld
+    app: my-kubernetes-component
     backstage.io/kubernetes-id: my-kubernetes-component
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: helloworld
+      app: my-kubernetes-component
   template:
     metadata:
       labels:
-        app: helloworld
-      annotations:
-        linkerd.io/inject: enabled
+        app: my-kubernetes-component
+        backstage.io/kubernetes-id: my-kubernetes-component
     spec:
       containers:
-      - name: helloworld
+      - name: my-kubernetes-component
         {{ if .Values.image }}
         image: "ironcore864/go-hello-http:{{ .Values.image.tag }}"
         {{ else }}
