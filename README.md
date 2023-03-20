@@ -1,6 +1,6 @@
 # GitOps with ArgoCD Showcase
 
-This repo is used to demo the GitOps concept and best practices with ArgoCD.
+This repository is used to demo the GitOps concept and best practices with ArgoCD.
 
 It uses the concept of "app of apps" to manage apps automatically across multiple clusters.
 
